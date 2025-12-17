@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GERAE - Grupo de Estudos de Robótica Aplicada e Educacional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Cabeçalho -->
+    <header role="banner">
+        <div class="header-controls">
+            <button id="high-contrast-toggle" class="contrast-toggle" aria-pressed="false">
+                <span class="sr-only">Alto contraste</span>
+                <span aria-hidden="true">🌗</span>
+            </button>
+            
+            <div class="font-size-controls">
+                <button id="font-decrease" aria-label="Diminuir tamanho da fonte">A-</button>
+                <button id="font-reset" aria-label="Tamanho normal da fonte">A</button>
+                <button id="font-increase" aria-label="Aumentar tamanho da fonte">A+</button>
+            </div>
+            
+            <button class="accessibility-shortcuts" aria-expanded="false" aria-controls="shortcuts-modal">
+                Atalhos de Teclado
+            </button>
+            
+            <button id="text-to-speech" class="tts-toggle" aria-pressed="false">
+                <span class="sr-only">Ler texto em voz alta</span>
+                <span aria-hidden="true">🔊</span>
+            </button>
+            
+            <button id="stop-tts" class="tts-stop" hidden>
+                <span class="sr-only">Parar leitura</span>
+                <span aria-hidden="true">⏹️</span>
+            </button>
+        </div>
+        
+        <div class="logo">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjMzQ5OGRiIi8+CjxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjIwIiBmaWxsPSIjZWNmMGYxIi8+CjxwYXRoIGQ9Ik0zMCAzMEg1MFY1MEgzMFYzMFoiIGZpbGw9IiMzNDk4ZGIiLz4KPHBhdGggZD0iTTM1IDM1SDQ1VjQ1SDM1VjM1WiIgZmlsbD0iI2U3NGMzYyIvPgo8L3N2Zz4K" alt="Logo do GERAE - Grupo de Estudos de Robótica Aplicada e Educacional">
+            <h1>GERAE - Grupo de Estudos de Robótica Aplicada e Educacional</h1>
+        </div>
+    </header>
+    
+    <!-- Navegação -->
+    <nav role="navigation" aria-label="Menu principal">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="midia.html">Mídia</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Modal de atalhos -->
+    <div id="shortcuts-modal" class="modal" hidden role="dialog" aria-labelledby="shortcuts-title">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar modal">×</button>
+            <h2 id="shortcuts-title">Atalhos de Teclado</h2>
+            <ul>
+                <li><kbd>Alt + 1</kbd> - Página inicial</li>
+                <li><kbd>Alt + 2</kbd> - Menu de navegação</li>
+                <li><kbd>Alt + 3</kbd> - Conteúdo principal</li>
+                <li><kbd>Alt + 4</kbd> - Rodapé</li>
+                <li><kbd>Alt + S</kbd> - Buscar</li>
+                <li><kbd>Alt + A</kbd> - Abrir atalhos</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Região para anúncios de leitor de tela -->
+    <div id="live-region" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    
+    <!-- Indicador de carregamento -->
+    <div id="loading-indicator" role="status" aria-live="polite" aria-label="Carregando conteúdo" class="loading" hidden>
+        <p>Carregando conteúdo, por favor aguarde...</p>
+        <div class="progress-bar">
+            <div class="progress-fill" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    
+    <!-- Conteúdo principal -->
+    <main id="main-content" role="main">
+        <!-- Breadcrumb -->
+        <nav aria-label="Navegação estrutural" class="breadcrumb">
+            <ol>
+                <li aria-current="page">Início</li>
+            </ol>
+        </nav>
+        
+        <!-- Seção de boas-vindas -->
+        <section aria-labelledby="sobre-heading">
+            <h2 id="sobre-heading">Sobre o GERAE</h2>
+            <p>O GERAE (Grupo de Estudos de Robótica Aplicada e Educacional) é um grupo de pesquisa dedicado ao desenvolvimento e aplicação de tecnologias robóticas em contextos educacionais e práticos. Nossa missão é promover o aprendizado e a inovação através da robótica, capacitando estudantes e profissionais para os desafios tecnológicos do futuro.</p>
+        </section>
+        
+        <!-- Seção de projetos (resumo) -->
+        <section aria-labelledby="projetos-heading">
+            <h2 id="projetos-heading">Nossos Projetos</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDI4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyODAiIGhlaWdodD0iMTgwIiBmaWxsPSIjZWNmMGYxIi8+CjxjaXJjbGUgY3g9IjE0MCIgY3k9IjkwIiByPSI0MCIgZmlsbD0iIzM0OThkYiIvPgo8cmVjdCB4PSIxMDAiIHk9IjcwIiB3aWR0aD0iODAiIGhlaWdodD0iNDAiIGZpbGw9IiNlNzRjM2MiLz4KPC9zdmc+Cg==" alt="Robô educacional desenvolvido pelo GERAE">
+                    <div class="card-content">
+                        <h3>Robô Educacional</h3>
+                        <p>Desenvolvimento de um robô para auxiliar no ensino de programação e lógica para estudantes do ensino fundamental.</p>
+                        <a href="projetos.html#robo-educacional" class="btn">Ver detalhes</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDI4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyODAiIGhlaWdodD0iMTgwIiBmaWxsPSIjZWNmMGYxIi8+Cjxwb2x5Z29uIHBvaW50cz0iMTQwLDUwIDE4MCw5MCAxMDAsOTAiIGZpbGw9IiMzNDk4ZGIiLz4KPHJlY3QgeD0iMTEwIiB5PSI5MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjZTc0YzNjIi8+Cjwvc3ZnPgo=" alt="Braço robótico para automação industrial">
+                    <div class="card-content">
+                        <h3>Braço Robótico</h3>
+                        <p>Projeto de um braço robótico de baixo custo para automação de pequenas tarefas industriais.</p>
+                        <a href="projetos.html#braco-robotico" class="btn">Ver detalhes</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDI4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyODAiIGhlaWdodD0iMTgwIiBmaWxsPSIjZWNmMGYxIi8+CjxyZWN0IHg9IjgwIiB5PSI2MCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSI2MCIgZmlsbD0iIzM0OThkYiIvPgo8Y2lyY2xlIGN4PSIxNDAiIGN5PSI5MCIgcj0iMjAiIGZpbGw9IiNlNzRjM2MiLz4KPC9zdmc+Cg==" alt="Drone para monitoramento ambiental">
+                    <div class="card-content">
+                        <h3>Drone de Monitoramento</h3>
+                        <p>Desenvolvimento de um drone para monitoramento ambiental e coleta de dados em áreas de difícil acesso.</p>
+                        <a href="projetos.html#drone-monitoramento" class="btn">Ver detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="projetos.html" class="btn">Ver todos os projetos</a>
+            </div>
+        </section>
+        
+        <!-- Seção de integrantes (resumo) -->
+        <section aria-labelledby="integrantes-heading">
+            <h2 id="integrantes-heading">Nossa Equipe</h2>
+            <p>O GERAE é composto por estudantes, pesquisadores e profissionais apaixonados por robótica e educação. Nossa equipe multidisciplinar inclui especialistas em engenharia, computação, educação e design.</p>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDI4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyODAiIGhlaWdodD0iMTgwIiBmaWxsPSIjZWNmMGYxIi8+CjxjaXJjbGUgY3g9IjE0MCIgY3k9IjgwIiByPSI0MCIgZmlsbD0iIzM0OThkYiIvPgo8Y2lyY2xlIGN4PSIxNDAiIGN5PSI3MCIgcj0iMjAiIGZpbGw9IiNlNzRjM2MiLz4KPHJlY3QgeD0iMTAwIiB5PSIxMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2U3NGMzYyIvPgo8L3N2Zz4K" alt="Foto do coordenador do GERAE">
+                    <div class="card-content">
+                        <h3>Prof. Dr. Carlos Silva</h3>
+                        <p>Coordenador do GERAE, especialista em robótica educacional com mais de 15 anos de experiência.</p>
+                        <a href="integrantes.html#carlos-silva" class="btn">Ver perfil</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDI4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyODAiIGhlaWdodD0iMTgwIiBmaWxsPSIjZWNmMGYxIi8+CjxjaXJjbGUgY3g9IjE0MCIgY3k9IjgwIiByPSI0MCIgZmlsbD0iIzM0OThkYiIvPgo8Y2lyY2xlIGN4PSIxNDAiIGN5PSI3MCIgcj0iMjAiIGZpbGw9IiNlNzRjM2MiLz4KPHJlY3QgeD0iMTAwIiB5PSIxMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2U3NGMzYyIvPgo8L3N2Zz4K" alt="Foto da pesquisadora sênior do GERAE">
+                    <div class="card-content">
+                        <h3>Dra. Ana Oliveira</h3>
+                        <p>Pesquisadora sênior, doutora em Inteligência Artificial aplicada à robótica autônoma.</p>
+                        <a href="integrantes.html#ana-oliveira" class="btn">Ver perfil</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="integrantes.html" class="btn">Conheça toda a equipe</a>
+            </div>
+        </section>
+        
+        <!-- Seção de eventos (resumo) -->
+        <section aria-labelledby="eventos-heading">
+            <h2 id="eventos-heading">Próximos Eventos</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Feira de Tecnologia Educacional</h3>
+                        <p><strong>Data:</strong> 15 de Novembro de 2023</p>
+                        <p><strong>Local:</strong> Centro de Convenções da Cidade</p>
+                        <p>Apresentação dos nossos projetos de robótica educacional e workshop para professores.</p>
+                        <a href="eventos.html#feira-tecnologia" class="btn">Mais informações</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Competição Nacional de Robótica</h3>
+                        <p><strong>Data:</strong> 5-7 de Dezembro de 2023</p>
+                        <p><strong>Local:</strong> Universidade Federal</p>
+                        <p>Nossa equipe participará com o robô de resgate desenvolvido no último semestre.</p>
+                        <a href="eventos.html#competicao-robotica" class="btn">Mais informações</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="eventos.html" class="btn">Ver todos os eventos</a>
+            </div>
+        </section>
+        
+        <!-- Seção de mídia (resumo) -->
+        <section aria-labelledby="midia-heading">
+            <h2 id="midia-heading">Na Mídia</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDI4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyODAiIGhlaWdodD0iMTgwIiBmaWxsPSIjZWNmMGYxIi8+CjxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMzNDk4ZGIiLz4KPHJlY3QgeD0iODAiIHk9IjYwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjZTc0YzNjIi8+Cjwvc3ZnPgo=" alt="Capa da revista com matéria sobre o GERAE">
+                    <div class="card-content">
+                        <h3>Revista Tecnologia & Educação</h3>
+                        <p>Matéria de capa sobre o impacto da robótica educacional no aprendizado de STEM.</p>
+                        <a href="midia.html#revista-tecnologia" class="btn">Ler matéria</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Vídeo: Demonstração do Robô Educacional</h3>
+                        <p>Vídeo mostrando o funcionamento do nosso robô educacional em sala de aula.</p>
+                        <a href="midia.html#video-robo-educacional" class="btn">Assistir vídeo</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="midia.html" class="btn">Ver toda a mídia</a>
+            </div>
+        </section>
+        
+        <!-- Formulário de contato -->
+        <section aria-labelledby="contato-heading">
+            <h2 id="contato-heading">Entre em Contato</h2>
+            <form id="contact-form" novalidate>
+                <fieldset>
+                    <legend>Informações de Contato</legend>
+                    
+                    <div class="form-group">
+                        <label for="name">Nome completo *</label>
+                        <input type="text" id="name" name="name" required 
+                               aria-describedby="name-error">
+                        <div id="name-error" class="error-message" aria-live="polite"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required
+                               aria-describedby="email-error email-hint">
+                        <div id="email-hint" class="hint">Exemplo: nome@provedor.com</div>
+                        <div id="email-error" class="error-message" aria-live="polite"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem *</label>
+                        <textarea id="message" name="message" required
+                                  aria-describedby="message-error"></textarea>
+                        <div id="message-error" class="error-message" aria-live="polite"></div>
+                    </div>
+                </fieldset>
+                
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <div role="search" aria-label="Buscar no site" class="search-container">
+        <form id="search-form">
+            <label for="search-input" class="sr-only">Buscar no site</label>
+            <input 
+                type="search" 
+                id="search-input" 
+                name="search" 
+                placeholder="Digite sua busca..."
+                aria-describedby="search-hint"
+            >
+            <button type="submit" aria-label="Buscar">
+                <span aria-hidden="true">🔍</span>
+            </button>
+        </form>
+        <div id="search-hint" class="hint sr-only">
+            Pressione Enter para buscar ou Escape para cancelar
+        </div>
+    </div>
+    
+    <!-- Rodapé -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@gerae.org</p>
+                <p>Telefone: (11) 1234-5678</p>
+                <p>Endereço: Rua da Inovação, 123 - Cidade - Estado</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <a href="index.html">Início</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="integrantes.html">Integrantes</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="midia.html">Mídia</a>
+                <a href="acessibilidade.html">Acessibilidade</a>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><span aria-hidden="true">f</span></a>
+                    <a href="#" aria-label="Instagram"><span aria-hidden="true">ig</span></a>
+                    <a href="#" aria-label="YouTube"><span aria-hidden="true">yt</span></a>
+                    <a href="#" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 GERAE - Grupo de Estudos de Robótica Aplicada e Educacional. Todos os direitos reservados.</p>
+            <p><a href="acessibilidade.html">Declaração de Acessibilidade</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

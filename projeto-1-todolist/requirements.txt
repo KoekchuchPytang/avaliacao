@@ -1,0 +1,10 @@
+Flask==3.1.2
+Flask-SQLAlchemy==3.1.1
+psycopg2-binary==2.9.9
+pytest==7.4.3
+pytest-flask==1.2.0
+Werkzeug==3.1.4
+Jinja2==3.1.6
+click==8.1.7
+itsdangerous==2.2.0
+blinker==1.9.0

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração de Acessibilidade - GERAE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Cabeçalho -->
+    <header role="banner">
+        <div class="header-controls">
+            <!-- Controles de acessibilidade (mesmo do index.html) -->
+        </div>
+        <div class="logo">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjMzQ5OGRiIi8+CjxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjIwIiBmaWxsPSIjZWNmMGYxIi8+CjxwYXRoIGQ9Ik0zMCAzMEg1MFY1MEgzMFYzMFoiIGZpbGw9IiMzNDk4ZGIiLz4KPHBhdGggZD0iTTM1IDM1SDQ1VjQ1SDM1VjM1WiIgZmlsbD0iI2U3NGMzYyIvPgo8L3N2Zz4K" alt="Logo do GERAE">
+            <h1>GERAE - Declaração de Acessibilidade</h1>
+        </div>
+    </header>
+    
+    <!-- Navegação -->
+    <nav role="navigation" aria-label="Menu principal">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="midia.html">Mídia</a></li>
+                <li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Conteúdo principal -->
+    <main id="main-content" role="main">
+        <!-- Breadcrumb -->
+        <nav aria-label="Navegação estrutural" class="breadcrumb">
+            <ol>
+                <li><a href="index.html">Início</a></li>
+                <li aria-current="page">Declaração de Acessibilidade</li>
+            </ol>
+        </nav>
+        
+        <section aria-labelledby="compromisso">
+            <h2 id="compromisso">Nosso Compromisso com a Acessibilidade</h2>
+            <p>O GERAE está comprometido em garantir acessibilidade digital para todas as pessoas, independentemente de suas habilidades ou deficiências. Estamos empenhados em seguir as melhores práticas e diretrizes de acessibilidade web.</p>
+        </section>
+        
+        <section aria-labelledby="conformidade">
+            <h2 id="conformidade">Conformidade com Padrões</h2>
+            <p>Este site está em conformidade com as Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.1 nível AA. As WCAG são um conjunto de recomendações para tornar o conteúdo web mais acessível.</p>
+            
+            <h3>Níveis de Conformidade Alcançados</h3>
+            <ul>
+                <li><strong>Nível A:</strong> Requisitos básicos de acessibilidade</li>
+                <li><strong>Nível AA:</strong> Requisitos que removem barreiras significativas</li>
+                <li><strong>Nível AAA:</strong> Requisitos que melhoram ainda mais a acessibilidade</li>
+            </ul>
+        </section>
+        
+        <section aria-labelledby="recursos">
+            <h2 id="recursos">Recursos de Acessibilidade Implementados</h2>
+            
+            <h3>Navegação e Estrutura</h3>
+            <ul>
+                <li>Estrutura semântica HTML5</li>
+                <li>Landmarks ARIA para navegação por leitores de tela</li>
+                <li>Skip links para pular para o conteúdo principal</li>
+                <li>Navegação por teclado completa</li>
+                <li>Indicadores de foco visíveis</li>
+                <li>Breadcrumbs para navegação estrutural</li>
+            </ul>
+            
+            <h3>Personalização Visual</h3>
+            <ul>
+                <li>Modo alto contraste</li>
+                <li>Controle de tamanho de fonte</li>
+                <li>Layout responsivo</li>
+                <li>Bom contraste de cores</li>
+                <li>Suporte a redução de movimento</li>
+            </ul>
+            
+            <h3>Conteúdo e Interação</h3>
+            <ul>
+                <li>Textos alternativos para imagens</li>
+                <li>Text-to-speech (leitura de texto em voz alta)</li>
+                <li>Atalhos de teclado</li>
+                <li>Formulários acessíveis com validação</li>
+                <li>Tabelas com descrições e escopo adequados</li>
+                <li>Anúncios de mudanças dinâmicas para leitores de tela</li>
+            </ul>
+        </section>
+        
+        <section aria-labelledby="atalhos">
+            <h2 id="atalhos">Atalhos de Teclado</h2>
+            <p>Para facilitar a navegação, implementamos os seguintes atalhos de teclado:</p>
+            <table aria-describedby="atalhos-desc">
+                <caption id="atalhos-desc" class="sr-only">Lista de atalhos de teclado disponíveis no site</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Atalho</th>
+                        <th scope="col">Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Alt + 1</th>
+                        <td>Ir para a página inicial</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + 2</th>
+                        <td>Ir para o menu de navegação</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + 3</th>
+                        <td>Ir para o conteúdo principal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + 4</th>
+                        <td>Ir para o rodapé</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + S</th>
+                        <td>Ir para a busca (se disponível)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alt + A</th>
+                        <td>Abrir modal de atalhos</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ESC</th>
+                        <td>Fechar modais ou menus abertos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section aria-labelledby="tecnologias">
+            <h2 id="tecnologias">Tecnologias de Acessibilidade Suportadas</h2>
+            <ul>
+                <li>Leitores de tela (NVDA, JAWS, VoiceOver)</li>
+                <li>Ampliação de tela</li>
+                <li>Navegação apenas por teclado</li>
+                <li>Software de reconhecimento de voz</li>
+                <li>Dispositivos de entrada alternativos</li>
+            </ul>
+        </section>
+        
+        <section aria-labelledby="feedback">
+            <h2 id="feedback">Feedback e Contato</h2>
+            <p>Estamos sempre buscando melhorar a acessibilidade do nosso site. Se você encontrar qualquer problema de acessibilidade ou tiver sugestões de melhoria, por favor entre em contato conosco:</p>
+            
+            <div class="contact-info">
+                <p><strong>E-mail:</strong> acessibilidade@gerae.org</p>
+                <p><strong>Telefone:</strong> (11) 1234-5678</p>
+                <p><strong>Horário de atendimento:</strong> Segunda a sexta, 9h às 18h</p>
+            </div>
+            
+            <p>Comprometemo-nos a responder a todos os feedbacks dentro de 5 dias úteis.</p>
+        </section>
+        
+        <section aria-labelledby="atualizacoes">
+            <h2 id="atualizacoes">Atualizações e Melhorias Contínuas</h2>
+            <p>Esta declaração de acessibilidade foi atualizada pela última vez em <time datetime="2023-11-01">1 de Novembro de 2023</time>.</p>
+            <p>Realizamos auditorias regulares de acessibilidade e implementamos melhorias contínuas com base no feedback dos usuários e nas atualizações das diretrizes WCAG.</p>
+        </section>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer role="contentinfo">
+        <!-- Mesmo rodapé do index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
